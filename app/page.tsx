@@ -38,23 +38,23 @@ export default function Home() {
       console.error('Error:', error);
     }
   };
-  const fetchData = async () => {
-    try {
-      const response = await fetch('/api/files',{
-        'method': 'GET',
-      })
-      const data = await response.json();
-      console.log(data);
-      setFiles(data.files);
-    } catch (error) {
-      console.error('Error fetching files:', error);
-    }
-  };
-
-  useEffect( () => {
-   
+  
+  // useEffect( () => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('/api/route',{
+  //         'method': 'GET',
+  //       })
+  //       const data = await response.json();
+  //       console.log(data);
+  //       setFiles(data.files);
+  //     } catch (error) {
+  //       console.error('Error fetching files:', error);
+  //     }
+  //   };
+  //   fetchData();
     
-  }, []);
+  // }, []);
   return (
     <div>
       <h1>Files</h1>
